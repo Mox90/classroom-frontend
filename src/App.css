@@ -13,15 +13,6 @@
   }
 }
 
-/*@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}*/
-
 @layer components {
   .page-title {
     @apply text-3xl font-bold text-foreground tracking-tight;
@@ -128,7 +119,7 @@
   }
 
   .intro-row {
-    @apply flex flex-col gap-5 lg:flex-row justify-between space-y-4;
+    @apply flex flex-col gap-5 lg:flex-row justify-between;
   }
 
   .class-view {

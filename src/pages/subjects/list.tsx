@@ -15,7 +15,7 @@ import {Badge} from "@/components/ui/badge.tsx";
 
 const SubjectsList = () => {
     const [searchQuery, setSearchQuery] = useState("")
-    const [selectedDepartment, setSelectedDepartment] = useState("")
+    const [selectedDepartment, setSelectedDepartment] = useState("all")
 
     const departmentFilters = selectedDepartment === "all" ? [] : [
         {field: "department", operator: "eq" as const, value: selectedDepartment}
