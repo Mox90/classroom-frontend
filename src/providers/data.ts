@@ -15,6 +15,7 @@ const options: CreateDataProviderOptions = {
       filters?.forEach((filter) => {
         const field = 'field' in filter ? filter.field : '';
 
+        if (!filter.value && filter.value !== 0 ) return
         const value = String(filter.value);
 
         if(resource === 'subjects'){
@@ -27,13 +28,13 @@ const options: CreateDataProviderOptions = {
     },
 
     mapResponse: async (response) => {
-      const payload: ListResponse = await response.json();
+      const payload: ListResponse = await response.clone().json();
 
       return payload.data ?? [];
     },
 
     getTotalCount: async (response) => {
-      const payload: ListResponse = await response.json();
+      const payload: ListResponse = await response.clone().json();
 
       return payload.pagination?.total ?? payload.data?.length ?? 0;
     }

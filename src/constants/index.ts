@@ -69,11 +69,11 @@ const getEnvVar = (key: string): string => {
 //export const CLOUDINARY_CLOUD_NAME = getEnvVar("VITE_CLOUDINARY_CLOUD_NAME");
 export const BACKEND_BASE_URL = getEnvVar("VITE_BACKEND_BASE_URL");
 
-export const BASE_URL =  import.meta.env.VITE_API_URL;
-export const ACCESS_TOKEN_KEY = import.meta.env.VITE_ACCESS_TOKEN_KEY
-export const REFRESH_TOKEN_KEY = import.meta.env.VITE_REFRESH_TOKEN_KEY
+//export const BASE_URL =  import.meta.env.VITE_API_URL;
+//export const ACCESS_TOKEN_KEY = import.meta.env.VITE_ACCESS_TOKEN_KEY
+//export const REFRESH_TOKEN_KEY = import.meta.env.VITE_REFRESH_TOKEN_KEY
 
-export const REFRESH_TOKEN_URL = `${BASE_URL}/refresh-token`;
+//export const REFRESH_TOKEN_URL = `${BASE_URL}/refresh-token`;
 
 //export const CLOUDINARY_UPLOAD_PRESET = getEnvVar("VITE_CLOUDINARY_UPLOAD_PRESET");
 
@@ -118,10 +118,14 @@ export const MOCK_SUBJECTS : Subject[] = [
         id: 4,
         name: "Chemistry",
         code: "CHEM",
+        department: "Chemistry",
+        description: "Introduction to general chemistry concepts.",
     },
     {
         id: 5,
         name: "Mathematics",
         code: "MATH",
+        department: "Mathematics",
+        description: "Foundational mathematics course.",
     }
 ];
